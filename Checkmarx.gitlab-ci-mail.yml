@@ -86,6 +86,8 @@ checkmarx-scan:
           --branch="${CI_COMMIT_BRANCH}"
           --spring.profiles.active="${CX_FLOW_ENABLED_VULNERABILITY_SCANNERS}" 
           --f=. 
+          --sca.enable-sca-resolver=true
+          --sca.sca-resolver-add-parameters="--report-type Risk --report-extension Pdf"
           ${PARAMS}
     - echo "This is post-scan action for SCA."
     - echo "List all files / folders in the current location"

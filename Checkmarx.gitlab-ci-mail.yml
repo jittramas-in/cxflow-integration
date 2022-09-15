@@ -90,7 +90,7 @@ checkmarx-scan:
     - echo "This is post-scan action for SCA."
     - echo "List all files / folders in the current location"
     - ls
-    - cd reports
+    - cd app
     - ls
     - echo "End of listing"
 

@@ -73,7 +73,7 @@ checkmarx-scan:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   variables:
-    CHECKMARX_INCREMENTAL: "true"
+    CHECKMARX_INCREMENTAL: "false"
   script:
     - ${CX_FLOW_EXE}
           --scan 

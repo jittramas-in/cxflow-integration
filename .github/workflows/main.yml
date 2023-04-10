@@ -22,6 +22,7 @@ jobs:
         checkmarx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }} # To be stored in GitHub Secrets.
         break_build: false
         scanners: sast
+        incremental: false
         bug_tracker: Sarif
         params: --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --cx-flow.filterSeverity --cx-flow.filterCategory  --checkmarx.disable-clubbing=true
     - name: Upload SARIF file
